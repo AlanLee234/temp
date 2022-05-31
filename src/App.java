@@ -1,3 +1,8 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 
@@ -27,13 +32,13 @@ public class App {
         // System.out.println( min);
         // System.out.println(max); 
 
-        int nowAction = 0;
-        int now=0;
-        while(now>=0){
-            now = getNextAction(2,nowAction,5);
-            System.out.println(now);
-            nowAction = now;
-        }
+        // int nowAction = 0;
+        // int now=0;
+        // while(now>=0){
+        //     now = getNextAction(2,nowAction,5);
+        //     System.out.println(now);
+        //     nowAction = now;
+        // }
         
     }
 
