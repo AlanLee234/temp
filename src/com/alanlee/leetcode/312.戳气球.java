@@ -1,3 +1,5 @@
+package com.alanlee.leetcode;
+
 /*
  * @lc app=leetcode.cn id=312 lang=java
  *
