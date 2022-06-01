@@ -29,7 +29,7 @@ public class ByteDance_202205061 {
             System.out.println(dur[0]);
             return;
         }
-        /* x
+        /* x other ans
         for (int i = 0; i < time.length - 1; i++) {
             for (int j = 0; j < time.length - 1 - i; j++) {
                 // 前后比较
@@ -43,6 +43,8 @@ public class ByteDance_202205061 {
                 }
             }
         }
+
+        // exam ans
         right = time[0] + dur[0]-1;
         for(int i=1;i<n;i++){
             if(time[i]>right){
@@ -69,5 +71,6 @@ public class ByteDance_202205061 {
             }
         }        
         System.out.println(count);        
+        sc.close();
     }
 }
