@@ -10,9 +10,7 @@ import java.util.Scanner;
 5 3 4 9 2 8 6 7 1
 out 4
 先从左到右遍历，得到以每个位置i为右端点的严格上升子数组的最长长度a[i]。再从右到左遍历，动态维护一个数组b，b[i]表示长度为i+1的严格上升子数组的左端点的最大值，这个数组是严格递减的。遍历到j时，对b二分查找满足b[k]>nums[j]的k的最大值kmax，记录kmax+1+a[j]的最大值，同时记录以j为左端点的严格上升子数组的最长长度p，当p<=len(b)时，b[p-1]=max(b[p-1],nums[j])；否则把nums[j]添加到b的末尾。
-https://www.nowcoder.com/discuss/947533?type=all&order=recall&pos=&page=1&ncTraceId=&channel=-1&source_id=search_all_nctrack&gio_id=E1F2A752355827A6295CD84EEB7BF212-1654055757592
-https://www.nowcoder.com/discuss/947957?type=all&order=recall&pos=&page=1&ncTraceId=&channel=-1&source_id=search_all_nctrack&gio_id=E1F2A752355827A6295CD84EEB7BF212-1654055757592
-https://leetcode.cn/circle/discuss/aqESuw/
+
 */
 
 public class ByteDance_202205064 {
