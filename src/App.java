@@ -274,7 +274,7 @@ class AesUtil {
     // IvParameterSpec(key.getBytes());
     // NOPadding: 使用NOPadding模式时, 原文长度必须是8byte的整数倍
     public static final String transformation = "AES/CBC/PKCS5Padding";
-    public static final String key = "testleetcode2580";
+    public static final String key = "0123456789123456";
  
     /***
      * 加密
