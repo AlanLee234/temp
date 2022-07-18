@@ -38,22 +38,29 @@ public class App {
         // // System.out.println("Hello, World!");
         // sc.close();
 
-        runWithAES();
-
+        // runWithAES();
+        // cancelAes();
+        readFilePath(filePath, outputPath);
     }
 
-    public static void runWithAES() throws Exception {
-        // String[] keyString = RsaUtil.generateKey(algorithm);
-        // System.out.println("publicKeyString: " + keyString[0]);
-        // System.out.println("privateKeyString: " + keyString[1]);
-
-        PublicKey publicKey = RsaUtil.loadPublicKeyFromString(algorithm, publicKeyString);
-        // String result = RsaUtil.encrypt(algorithm, "input", publicKey, 1024);
-
+    public static void readFilePath(String filePath, String outputPath) {
         try {
             ArrayList<String> fileNameList = readFiles(filePath, new ArrayList<String>());
             System.out.println(fileNameList.size());
             for (int i = 0; i < fileNameList.size(); i++) {
+                outputToTxt(fileNameList.get(i), outputPath);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void runWithAES() throws Exception {
+        try {
+            ArrayList<String> fileNameList = readFiles(filePath, new ArrayList<String>());
+            System.out.println(fileNameList.size());
+            for (int i = 0; i < fileNameList.size(); i++) {
+                outputToTxt(AesUtil.encrypt("abcdefg" + i), outputPath);
                 outputToTxt(AesUtil.encrypt(fileNameList.get(i)), outputPath);
                 // readAndWriteToOtherTxt(fileNameList.get(i));
 
@@ -67,15 +74,18 @@ public class App {
                     line = br.readLine(); // 一次读入一行数据
                     if (line != null && !line.equals("") && line.length() != 0){
                         outputToTxt(AesUtil.encrypt(line), outputPath);
-                    }
-                    
+                    }               
                 }
                 br.close();
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("ok");
 
+    }
+
+    public static void cancelAes() {
         try {
             // 防止文件建立或读取失败，用catch捕捉错误并打印，也可以throw
 
@@ -97,9 +107,6 @@ public class App {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        System.out.println("ok");
-
     }
 
     public static void runWithRSA() throws Exception {
@@ -267,7 +274,7 @@ class AesUtil {
     // IvParameterSpec(key.getBytes());
     // NOPadding: 使用NOPadding模式时, 原文长度必须是8byte的整数倍
     public static final String transformation = "AES/CBC/PKCS5Padding";
-    public static final String key = "";
+    public static final String key = "testleetcode2580";
  
     /***
      * 加密
