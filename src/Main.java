@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 
 public class Main {
 
-    static String filePath = "E:\\java-mock-backend\\src\\test";
+    static String filePath = "C:\\Users\\AlanLee\\Desktop\\a";
     static String outputPath = "E:\\ok.txt";
 
     public static void main(String[] args) {
@@ -26,7 +26,8 @@ public class Main {
             ArrayList<String> fileNameList = readFiles(filePath, new ArrayList<String>());
             System.out.println(fileNameList.size());
             for (int i = 0; i < fileNameList.size(); i++) {
-                outputToTxt(fileNameList.get(i), outputPath);
+                System.out.println(i + ": " + fileNameList.get(i));
+                outputToTxt(i + ": " + fileNameList.get(i), outputPath);
                 readAndWriteToOtherTxt(fileNameList.get(i),outputPath);
             }
         } catch (Exception e) {
@@ -63,19 +64,19 @@ public class Main {
         return fileNameList;
     }
 
-    public static void readAndWriteToOtherTxt(String pathname, String outputPath) {
+    public static void readAndWriteToOtherTxt(String pathName, String outputPath) {
         try {
             // 防止文件建立或读取失败，用catch捕捉错误并打印，也可以throw
 
             /* 读入TXT文件 */
-            File filename = new File(pathname); // 要读取以上路径的input。txt文件
+            File filename = new File(pathName); // 要读取以上路径的input。txt文件
             InputStreamReader reader = new InputStreamReader(new FileInputStream(filename)); // 建立一个输入流对象reader
             BufferedReader br = new BufferedReader(reader); // 建立一个对象，它把文件内容转成计算机能读懂的语言
             String line = "";
             line = br.readLine();
             while (line != null) {
-                line = br.readLine(); // 一次读入一行数据
                 outputToTxt(line, outputPath);
+                line = br.readLine(); // 一次读入一行数据               
             }
             br.close();
 
