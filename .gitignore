@@ -27,3 +27,9 @@ hs_err_pid*
 out
 .idea
 algorithm-diary.iml
+
+.DS_Store
+**/.DS_Store
+.DS_Store?
+
+
