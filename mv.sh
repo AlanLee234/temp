@@ -3,4 +3,4 @@ MV -i ./src/nowcoder/* ../JAVA/src/nowcoder/
 MV -i ./src/real/* ../JAVA/src/real/
 MV -i ./MYSQL/nowcoder/* ../MYSQL/nowcoder/
 
-# ./move.sh
+# ./mv.sh
