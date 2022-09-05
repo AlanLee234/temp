@@ -1,4 +1,4 @@
-package com.alanlee.basics.structure;
+package basics.structure;
 
 // Definition for singly-linked list.
 public class ListNode {
