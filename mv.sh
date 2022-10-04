@@ -7,4 +7,6 @@ MV -i ./MySQL/real/* ../MySQL/real/
 
 MV -i ./Python/leetcode/* ../Python/leetcode/
 
+MV -i ./CPP/leetcode/* ../CPP/leetcode/
+
 # ./mv.sh

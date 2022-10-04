@@ -7,4 +7,6 @@ MOVE /-Y .\MySQL\real\* ..\MySQL\real\
 
 MOVE /-Y .\Python\leetcode\* ..\Python\leetcode\
 
+MOVE /-Y .\CPP\leetcode\* ..\CPP\leetcode\
+
 @REM .\mv.cmd
