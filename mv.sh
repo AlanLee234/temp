@@ -6,6 +6,7 @@ MV -i ./MySQL/nowcoder/* ../MySQL/nowcoder/
 MV -i ./MySQL/real/* ../MySQL/real/
 
 MV -i ./Python/leetcode/* ../Python/leetcode/
+MV -i ./Python/real/* ../Python/real/
 
 MV -i ./CPP/leetcode/* ../CPP/leetcode/
 
