@@ -11,5 +11,6 @@ MOVE /-Y .\Python\leetcode\* ..\Python\leetcode\
 MOVE /-Y .\Python\real\* ..\Python\real\
 
 MOVE /-Y .\CPP\leetcode\* ..\CPP\leetcode\
+MOVE /-Y .\CPP\real\* ..\CPP\real\
 
 @REM .\mv.cmd

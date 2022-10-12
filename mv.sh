@@ -11,5 +11,6 @@ MV -i ./Python/leetcode/* ../Python/leetcode/
 MV -i ./Python/real/* ../Python/real/
 
 MV -i ./CPP/leetcode/* ../CPP/leetcode/
+MV -i ./CPP/real/* ../CPP/real/
 
 # ./mv.sh
