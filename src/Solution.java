@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -9,6 +9,6 @@ public class Main {
             String[] s = str.split(" ");
             System.out.println(Integer.parseInt(str.substring(2, str.length()), 16));
         }
-        sc.close();       
+        sc.close();
     }
 }
