@@ -33,3 +33,5 @@ algorithm-diary.iml
 .DS_Store?
 
 
+CPP/out
+CPP/*.exe
